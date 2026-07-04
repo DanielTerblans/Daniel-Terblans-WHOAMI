@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Daniel Terblans — Resume</title>
+  <meta name="description" content="Daniel Terblans — work experience, education, and future plans." />
+  <meta name="referrer" content="no-referrer" />
+
+  <!-- Security: restrict all resources to same-origin, no inline scripts/styles from third parties,
+       no external network calls, no framing by other sites. Everything is self-hosted. -->
+  <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'none'; object-src 'none'; upgrade-insecure-requests;" />
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+
+  <link rel="icon" href="data:," />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="nav" aria-label="Primary">
+      <a href="#top" class="logo">DT</a>
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#future">Future Plans</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark mode">
+        <span aria-hidden="true">🌙</span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="top" class="hero">
+      <div class="container">
+        <p class="eyebrow">Hi, I'm</p>
+        <h1>Daniel Terblans</h1>
+        <p class="tagline" id="typedTagline"></p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-primary">Get in touch</a>
+          <a href="#experience" class="btn btn-secondary">View experience</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="section reveal">
+      <div class="container">
+        <h2><span class="section-index">01</span> Work Experience</h2>
+        <ol class="timeline">
+          <li class="timeline-item">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-content">
+              <div class="timeline-meta">
+                <span class="timeline-date">2022 — Current</span>
+              </div>
+              <h3>Kitchen Hand</h3>
+              <p class="timeline-org">K&amp;K Austrian Coffee House</p>
+              <p>
+                Supporting daily kitchen and café operations in a fast-paced hospitality environment —
+                food preparation, maintaining hygiene and safety standards, and working closely with the
+                team to keep service running smoothly during busy periods.
+              </p>
+              <ul class="tag-list">
+                <li>Food Preparation</li>
+                <li>Food Safety &amp; Hygiene</li>
+                <li>Teamwork</li>
+                <li>Time Management</li>
+              </ul>
+            </div>
+          </li>
+          <li class="timeline-item">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-content">
+              <div class="timeline-meta">
+                <span class="timeline-date">Work Placement</span>
+              </div>
+              <h3>Cyber Security &amp; Robotics Work Experience</h3>
+              <p class="timeline-org">Australian Signals Directorate (ASD)</p>
+              <p>
+                Hands-on exposure to real-world cyber security and robotics work through ASD's work
+                experience program — gaining early insight into how security teams and robotics
+                engineers operate, and building foundational technical interest in the field.
+              </p>
+              <ul class="tag-list">
+                <li>Cyber Security Fundamentals</li>
+                <li>Robotics</li>
+                <li>Problem Solving</li>
+              </ul>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="education" class="section reveal">
+      <div class="container">
+        <h2><span class="section-index">02</span> Education</h2>
+        <div class="card-grid">
+          <div class="card">
+            <h3>QCE Senior Secondary Diploma</h3>
+            <p class="card-status status-progress">In Progress</p>
+            <p>Working towards completion of the Queensland Certificate of Education.</p>
+          </div>
+          <div class="card">
+            <h3>Certificate II in Vocational Workplace Skills</h3>
+            <p class="card-status status-complete">Completed</p>
+            <p>Foundational workplace skills covering communication, teamwork, and workplace conduct.</p>
+          </div>
+          <div class="card">
+            <h3>Barista Qualification</h3>
+            <p class="card-status status-complete">Completed</p>
+            <p>Practical qualification in espresso-based coffee preparation and customer service.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="future" class="section reveal">
+      <div class="container">
+        <h2><span class="section-index">03</span> Future Plans</h2>
+        <div class="future-content">
+          <p>
+            After completing my QCE, I'm planning to pursue further study to build on the interest in
+            cyber security and robotics I developed through my ASD work experience. My goal is to keep
+            developing both my technical skills and the practical, people-facing skills I've picked up
+            through hospitality work, and move towards further education or an entry-level role in the
+            technology or security field.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section reveal">
+      <div class="container">
+        <h2><span class="section-index">04</span> Contact</h2>
+        <p class="contact-lead">Feel free to reach out — I'd love to hear from you.</p>
+        <div class="contact-card">
+          <p class="contact-name">Daniel Terblans</p>
+          <p class="contact-email" id="emailLink"></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Daniel Terblans. Built with HTML, CSS &amp; JavaScript.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
