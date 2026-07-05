@@ -101,31 +101,97 @@
     <section id="education" class="section reveal">
       <div class="container">
         <h2><span class="section-index">02</span> Education</h2>
-        <div class="card-grid">
-          <div class="card">
-            <h3>QCE Senior Secondary Diploma</h3>
-            <p class="card-status status-progress">In Progress</p>
-            <p>Working towards completion of the Queensland Certificate of Education.</p>
+        <p class="edu-hint">Click a category to expand it.</p>
+
+        <div class="edu-accordion" id="eduAccordion">
+
+          <div class="edu-category is-open" data-category="tech">
+            <h3 class="edu-category-heading">
+              <button type="button" class="edu-category-toggle" aria-expanded="true"
+                      aria-controls="edu-panel-tech" id="edu-toggle-tech">
+                <span class="edu-category-icon" aria-hidden="true">💻</span>
+                <span class="edu-category-title">Tech &amp; Digital Skills</span>
+                <span class="edu-category-count">1</span>
+                <svg class="edu-chevron" viewBox="0 0 20 20" aria-hidden="true">
+                  <path d="M6 8l4 4 4-4" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </button>
+            </h3>
+            <div class="edu-panel-wrapper" id="edu-panel-tech" role="region" aria-labelledby="edu-toggle-tech">
+              <div class="edu-panel">
+                <div class="card-grid">
+                  <div class="card">
+                    <h4>Introduction to Claude Cowork</h4>
+                    <p class="card-status status-complete">Completed</p>
+                    <p>
+                      Course on using Claude's Cowork mode to automate everyday file and task work.
+                      <a href="https://anthropic.skilljar.com/introduction-to-claude-cowork"
+                         target="_blank" rel="noopener noreferrer">View course ↗</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="card">
-            <h3>Certificate II in Vocational Workplace Skills</h3>
-            <p class="card-status status-complete">Completed</p>
-            <p>Foundational workplace skills covering communication, teamwork, and workplace conduct.</p>
+
+          <div class="edu-category" data-category="vocational">
+            <h3 class="edu-category-heading">
+              <button type="button" class="edu-category-toggle" aria-expanded="false"
+                      aria-controls="edu-panel-vocational" id="edu-toggle-vocational">
+                <span class="edu-category-icon" aria-hidden="true">🧑‍🍳</span>
+                <span class="edu-category-title">Vocational &amp; Hospitality</span>
+                <span class="edu-category-count">2</span>
+                <svg class="edu-chevron" viewBox="0 0 20 20" aria-hidden="true">
+                  <path d="M6 8l4 4 4-4" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </button>
+            </h3>
+            <div class="edu-panel-wrapper" id="edu-panel-vocational" role="region" aria-labelledby="edu-toggle-vocational">
+              <div class="edu-panel">
+                <div class="card-grid">
+                  <div class="card">
+                    <h4>Certificate II in Vocational Workplace Skills</h4>
+                    <p class="card-status status-complete">Completed</p>
+                    <p>Foundational workplace skills covering communication, teamwork, and workplace conduct.</p>
+                  </div>
+                  <div class="card">
+                    <h4>Barista Qualification</h4>
+                    <p class="card-status status-complete">Completed</p>
+                    <p>Practical qualification in espresso-based coffee preparation and customer service.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="card">
-            <h3>Barista Qualification</h3>
-            <p class="card-status status-complete">Completed</p>
-            <p>Practical qualification in espresso-based coffee preparation and customer service.</p>
+
+          <div class="edu-category" data-category="academic">
+            <h3 class="edu-category-heading">
+              <button type="button" class="edu-category-toggle" aria-expanded="false"
+                      aria-controls="edu-panel-academic" id="edu-toggle-academic">
+                <span class="edu-category-icon" aria-hidden="true">🎓</span>
+                <span class="edu-category-title">Academic</span>
+                <span class="edu-category-count">1</span>
+                <svg class="edu-chevron" viewBox="0 0 20 20" aria-hidden="true">
+                  <path d="M6 8l4 4 4-4" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </button>
+            </h3>
+            <div class="edu-panel-wrapper" id="edu-panel-academic" role="region" aria-labelledby="edu-toggle-academic">
+              <div class="edu-panel">
+                <div class="card-grid">
+                  <div class="card">
+                    <h4>QCE Senior Secondary Diploma</h4>
+                    <p class="card-status status-progress">In Progress</p>
+                    <p>Working towards completion of the Queensland Certificate of Education.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="card">
-            <h3>Introduction to Claude Cowork</h3>
-            <p class="card-status status-complete">Completed</p>
-            <p>
-              Course on using Claude's Cowork mode to automate everyday file and task work.
-              <a href="https://anthropic.skilljar.com/introduction-to-claude-cowork"
-                 target="_blank" rel="noopener noreferrer">View course ↗</a>
-            </p>
-          </div>
+
         </div>
       </div>
     </section>
