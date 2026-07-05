@@ -305,6 +305,111 @@ body {
   border-radius: 999px;
 }
 
+/* Education accordion */
+.edu-hint {
+  margin: -20px 0 24px;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+.edu-accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.edu-category {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg-alt);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.edu-category-heading {
+  margin: 0;
+}
+
+.edu-category-toggle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px 22px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font: inherit;
+  color: var(--text);
+  transition: background var(--transition);
+}
+
+.edu-category-toggle:hover,
+.edu-category-toggle:focus-visible {
+  background: var(--accent-soft);
+}
+
+.edu-category-icon {
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+.edu-category-title {
+  font-weight: 700;
+  font-size: 1.02rem;
+  flex: 1;
+}
+
+.edu-category-count {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--accent);
+  background: var(--accent-soft);
+  padding: 3px 11px;
+  border-radius: 999px;
+  flex-shrink: 0;
+}
+
+.edu-chevron {
+  width: 18px;
+  height: 18px;
+  color: var(--text-muted);
+  transition: transform var(--transition);
+  flex-shrink: 0;
+}
+
+.edu-category.is-open .edu-chevron {
+  transform: rotate(180deg);
+}
+
+.edu-category.is-open .edu-category-toggle {
+  border-bottom: 1px solid var(--border);
+}
+
+.edu-panel-wrapper {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 320ms ease;
+}
+
+.edu-category.is-open .edu-panel-wrapper {
+  grid-template-rows: 1fr;
+}
+
+.edu-panel {
+  overflow: hidden;
+  min-height: 0;
+}
+
+.edu-panel .card-grid {
+  padding: 20px 22px 22px;
+}
+
+.edu-panel .card {
+  box-shadow: none;
+}
+
 /* Education cards */
 .card-grid {
   display: grid;
@@ -320,7 +425,8 @@ body {
   box-shadow: var(--shadow);
 }
 
-.card h3 {
+.card h3,
+.card h4 {
   margin: 0 0 8px;
   font-size: 1.05rem;
 }
@@ -330,6 +436,17 @@ body {
   color: var(--text-muted);
   line-height: 1.5;
   font-size: 0.92rem;
+}
+
+.card p a {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.card p a:hover,
+.card p a:focus-visible {
+  text-decoration: underline;
 }
 
 .card-status {
