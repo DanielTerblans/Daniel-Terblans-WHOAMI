@@ -72,6 +72,36 @@
     });
   }
 
+  /* ---------- Education accordion ---------- */
+  function initEduAccordion() {
+    var toggles = document.querySelectorAll(".edu-category-toggle");
+    if (!toggles.length) return;
+
+    toggles.forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var category = btn.closest(".edu-category");
+        if (!category) return;
+
+        var isOpen = category.classList.contains("is-open");
+        category.classList.toggle("is-open", !isOpen);
+        btn.setAttribute("aria-expanded", isOpen ? "false" : "true");
+      });
+
+      // Allow arrow-key navigation between category headers for easier keyboard use.
+      btn.addEventListener("keydown", function (event) {
+        var key = event.key;
+        if (key !== "ArrowDown" && key !== "ArrowUp") return;
+
+        event.preventDefault();
+        var allToggles = Array.prototype.slice.call(toggles);
+        var index = allToggles.indexOf(btn);
+        var nextIndex = key === "ArrowDown" ? index + 1 : index - 1;
+        var next = allToggles[(nextIndex + allToggles.length) % allToggles.length];
+        if (next) next.focus();
+      });
+    });
+  }
+
   /* ---------- Typing effect for hero tagline ---------- */
   function initTyping() {
     var el = document.getElementById("typedTagline");
@@ -181,6 +211,7 @@
   document.addEventListener("DOMContentLoaded", function () {
     initTheme();
     initNav();
+    initEduAccordion();
     initTyping();
     initReveal();
     initEmail();
